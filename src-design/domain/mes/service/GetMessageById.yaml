@@ -5,6 +5,8 @@ creator: Ronny Krammer
 creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
 label: GetMessage by Id
 type: domain
+inputEntityLink: /domain/mes/entity/GetMessageById_Input
+outputEntityLink: /domain/mes/entity/Message
 mappedBusinessErrorLinks: []
 mappedBusinessEventLinks: []
 documentation:

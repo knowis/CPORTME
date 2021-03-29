@@ -6,6 +6,7 @@ creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
 label: Add Message
 type: factory
 baseEntityLink: /domain/mes/entity/Message
+inputEntityLink: /domain/mes/entity/AddMessage_Input
 mappedBusinessErrorLinks: []
 mappedBusinessEventLinks: []
 documentation:
