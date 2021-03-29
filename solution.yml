@@ -1,0 +1,12 @@
+appAcronym: "CPORTME"
+appName: "Customer Portal UI User Messages Service"
+appIcon: "newspaper outline"
+appDescription: ""
+appType: "DDD"
+category: "EXPERIENCE_API"
+creationTs: "1617000751332"
+creator: "Ronny Krammer"
+creatorId: "d36f56a3-2471-4d3e-9a7b-c6d13324c341"
+domainTags: []
+language: "TYPESCRIPT"
+basePackage: ""
