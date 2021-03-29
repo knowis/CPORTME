@@ -4,6 +4,8 @@ export default class extends operations.v1_deleteAllMessages {
   public async execute(): Promise<void> {
     const log = this.util.log;
     log.debug('v1_deleteAllMessages.execute()');
+
+    void await this.factory.entity.mes.Message().DeleteAllMessages();
   }
 
   /**

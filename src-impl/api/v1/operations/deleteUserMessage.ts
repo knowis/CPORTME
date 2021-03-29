@@ -4,6 +4,12 @@ export default class extends operations.v1_deleteUserMessage {
   public async execute(): Promise<void> {
     const log = this.util.log;
     log.debug('v1_deleteUserMessage.execute()');
+
+    const id = this.request.path.id;
+    const DeleteMessageInput = this.factory.entity.mes.DeleteMessage_Input();
+    DeleteMessageInput.id = id;
+
+    void await this.factory.entity.mes.Message().DeleteMessage(DeleteMessageInput);
   }
 
   /**
