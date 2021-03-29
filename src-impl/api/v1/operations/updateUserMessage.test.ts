@@ -1,7 +1,6 @@
 import { expect } from 'chai';
 import { operationRunners, TestEnvironment } from 'solution-framework';
 
-
 describe('updateUserMessage', () => {
   const testEnvironment = new TestEnvironment();
   before(async () => {

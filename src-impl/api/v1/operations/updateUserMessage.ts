@@ -1,6 +1,4 @@
 import { operations } from 'solution-framework';
-
-
 export default class extends operations.v1_updateUserMessage {
 
   public async execute(): Promise<void> {
