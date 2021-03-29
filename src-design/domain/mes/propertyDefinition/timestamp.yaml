@@ -1,0 +1,13 @@
+schemaVersion: /v2/propertyDefinition.schema.json
+comments: []
+creationTs: '1617005612101'
+creator: Ronny Krammer
+creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
+label: Timestamp
+type: timestamp
+documentation:
+  fileLink: /domain/mes/propertyDefinition/timestamp.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1617005612137'
+  creator: Ronny Krammer
+  creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341

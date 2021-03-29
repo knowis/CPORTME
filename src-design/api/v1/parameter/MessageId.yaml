@@ -1,0 +1,11 @@
+schemaVersion: /v2/apiParameter.schema.json
+comments: []
+creationTs: '1617001987751'
+creator: Ronny Krammer
+creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
+name: id
+location: path
+required: true
+schema:
+  type: string
+  enum: []

@@ -1,0 +1,22 @@
+schemaVersion: /v3/entity.schema.json
+type: entity
+creationTs: '1617006731128'
+creator: Ronny Krammer
+creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
+comments: []
+isAbstract: false
+documentation:
+  fileLink: /domain/mes/entity/DeleteMessages_Input.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1617006731159'
+  creator: Ronny Krammer
+  creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
+label: Delete Messages Input
+parentLinks: []
+properties:
+  - mappingType: value
+    isMandatory: true
+    propertyDefinitionLink: /domain/mes/propertyDefinition/user
+    propertyName: user
+constructorProperties: []
+isLocallyManaged: true

@@ -1,0 +1,16 @@
+schemaVersion: /v2/command.schema.json
+comments: []
+creationTs: '1617006941200'
+creator: Ronny Krammer
+creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
+label: Delete All Messages
+type: instance
+baseEntityLink: /domain/mes/entity/Message
+mappedBusinessErrorLinks: []
+mappedBusinessEventLinks: []
+documentation:
+  fileLink: /domain/mes/command/DeleteAllMessages.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1617006941227'
+  creator: Ronny Krammer
+  creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341

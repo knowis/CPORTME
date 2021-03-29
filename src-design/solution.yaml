@@ -1,0 +1,10 @@
+schemaVersion: /v1/solution.schema.json
+creationTs: '1617000747369'
+creator: Ronny Krammer
+creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
+documentation:
+  fileLink: /solution.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1617000747369'
+  creator: Ronny Krammer
+  creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341

@@ -1,0 +1,17 @@
+schemaVersion: /v2/command.schema.json
+comments: []
+creationTs: '1617006106461'
+creator: Ronny Krammer
+creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
+label: Delete Message
+type: instance
+baseEntityLink: /domain/mes/entity/Message
+inputEntityLink: /domain/mes/entity/DeleteMessage_Input
+mappedBusinessErrorLinks: []
+mappedBusinessEventLinks: []
+documentation:
+  fileLink: /domain/mes/command/DeleteMessage.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1617006106494'
+  creator: Ronny Krammer
+  creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341

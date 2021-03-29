@@ -1,0 +1,6 @@
+schemaVersion: /v1/path.schema.json
+url: '/messages/{user}/{id}'
+comments: []
+creationTs: '1617002746329'
+creator: Ronny Krammer
+creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341

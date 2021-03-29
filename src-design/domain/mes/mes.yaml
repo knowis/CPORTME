@@ -1,0 +1,12 @@
+schemaVersion: /v2/namespace.schema.json
+type: domain
+creationTs: '1617005459525'
+creator: Ronny Krammer
+creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
+label: Messages
+documentation:
+  fileLink: /domain/mes/mes.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1617005459525'
+  creator: Ronny Krammer
+  creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341

@@ -1,0 +1,15 @@
+schemaVersion: /v2/service.schema.json
+comments: []
+creationTs: '1617007038189'
+creator: Ronny Krammer
+creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
+label: GetMessages by User
+type: domain
+mappedBusinessErrorLinks: []
+mappedBusinessEventLinks: []
+documentation:
+  fileLink: /domain/mes/service/GetMessagesByUser.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1617007038216'
+  creator: Ronny Krammer
+  creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341

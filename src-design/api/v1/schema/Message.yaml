@@ -1,0 +1,38 @@
+schemaVersion: /v1/apiSchema.schema.json
+comments: []
+creationTs: '1617002178151'
+creator: Ronny Krammer
+creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
+description: The schema definition of a message
+type: object
+title: Message
+allOfLinks: []
+properties:
+  - name: id
+    required: true
+    schema:
+      description: Message Id
+      type: string
+      title: Id
+      enum: []
+  - name: text
+    required: false
+    schema:
+      description: Array of message content
+      type: array
+      title: Text
+      itemsLink: /api/v1/schema/MessageContent
+  - name: timestamp
+    required: false
+    schema:
+      description: Timestamp as formated string
+      type: string
+      title: Timestamp
+      enum: []
+  - name: sender
+    required: false
+    schema:
+      description: Sender of the message
+      type: string
+      title: Sender
+      enum: []

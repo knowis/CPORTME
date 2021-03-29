@@ -1,0 +1,23 @@
+schemaVersion: /v3/apiOperation.schema.json
+comments: []
+creationTs: '1617003225441'
+creator: Ronny Krammer
+creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
+summary: Adds a message for the user
+type: POST
+tags: []
+parameters:
+  - /api/v1/parameter/User
+requestBody: /api/v1/requestBody/MessageRequestBody
+pathLink: '/api/v1/path/#messages#{user}'
+responses:
+  - httpStatusCode: '200'
+    response:
+      description: The message was saved for the user
+      content: []
+documentation:
+  fileLink: /api/v1/operation/addUserMessage.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1617003225473'
+  creator: Ronny Krammer
+  creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341

@@ -1,0 +1,28 @@
+schemaVersion: /v3/apiOperation.schema.json
+comments: []
+creationTs: '1617005156751'
+creator: Ronny Krammer
+creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
+summary: Deletes a message
+type: DELETE
+tags:
+  - delete
+parameters:
+  - /api/v1/parameter/MessageId
+  - /api/v1/parameter/User
+pathLink: '/api/v1/path/#messages#{user}#{id}'
+responses:
+  - httpStatusCode: '200'
+    response:
+      description: The message was deleted
+      content: []
+  - httpStatusCode: '404'
+    response:
+      description: Message not found
+      content: []
+documentation:
+  fileLink: /api/v1/operation/deleteUserMessage.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1617005156782'
+  creator: Ronny Krammer
+  creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341

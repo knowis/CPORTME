@@ -1,0 +1,20 @@
+schemaVersion: /v3/apiOperation.schema.json
+comments: []
+creationTs: '1617004182468'
+creator: Ronny Krammer
+creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
+summary: Gets the users messages
+type: GET
+tags: []
+parameters:
+  - /api/v1/parameter/User
+pathLink: '/api/v1/path/#messages#{user}'
+responses:
+  - httpStatusCode: '200'
+    response: /api/v1/response/MessagesResponse
+documentation:
+  fileLink: /api/v1/operation/getUserMessages.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1617004182499'
+  creator: Ronny Krammer
+  creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341

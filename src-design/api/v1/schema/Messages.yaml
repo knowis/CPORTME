@@ -1,0 +1,9 @@
+schemaVersion: /v1/apiSchema.schema.json
+comments: []
+creationTs: '1617002320466'
+creator: Ronny Krammer
+creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
+description: The schema definition for an array of messages
+type: array
+title: Messages
+itemsLink: /api/v1/schema/Message

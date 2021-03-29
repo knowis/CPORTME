@@ -1,0 +1,13 @@
+schemaVersion: /v2/propertyDefinition.schema.json
+comments: []
+creationTs: '1617005551090'
+creator: Ronny Krammer
+creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
+label: Message Id
+type: text
+documentation:
+  fileLink: /domain/mes/propertyDefinition/id.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1617005551122'
+  creator: Ronny Krammer
+  creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
