@@ -13,8 +13,8 @@ export class MessageMapper extends mappers.BaseMapper {
 
     const schema = this.factory.schema.v1.Message();
     if (this.instanceOf.entity.mes.Message(entity)) {
-      const { id, sender, text, timestamp, user } = entity;
-      schema.id = id;
+      const { _id, sender, text, timestamp, user } = entity;
+      schema.id = _id;
       schema.sender = sender;
       schema.text = text.map((messageContent) => messageContent.content);
       schema.timestamp = dateformat(timestamp);
