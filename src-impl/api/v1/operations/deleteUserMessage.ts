@@ -10,6 +10,7 @@ export default class extends operations.v1_deleteUserMessage {
     DeleteMessageInput.id = id;
 
     void await this.factory.entity.mes.Message().DeleteMessage(DeleteMessageInput);
+    this.response.status = 200;
   }
 
   /**

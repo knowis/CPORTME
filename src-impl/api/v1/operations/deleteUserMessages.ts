@@ -9,6 +9,7 @@ export default class extends operations.v1_deleteUserMessages {
     DeleteMessagesInput.user = user;
 
     void await this.factory.entity.mes.Message().DeleteMessages(DeleteMessagesInput);
+    this.response.status = 200;
   }
 
   /**

@@ -17,7 +17,6 @@ export default class extends operations.v1_addUserMessage {
     });
 
     void await this.repo.mes.Message.AddMessage(AddMessageInput);
-
     this.response.status = 200;
   }
 

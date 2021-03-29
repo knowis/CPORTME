@@ -6,6 +6,7 @@ export default class extends operations.v1_deleteAllMessages {
     log.debug('v1_deleteAllMessages.execute()');
 
     void await this.factory.entity.mes.Message().DeleteAllMessages();
+    this.response.status = 200;
   }
 
   /**
