@@ -16,10 +16,6 @@ parentLinks: []
 dbCollectionLink: /domain/mes/dbCollection/messages
 properties:
   - mappingType: value
-    isMandatory: true
-    propertyDefinitionLink: /domain/mes/propertyDefinition/id
-    propertyName: id
-  - mappingType: value
     isMandatory: false
     propertyDefinitionLink: /domain/mes/propertyDefinition/sender
     propertyName: sender
