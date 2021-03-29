@@ -21,3 +21,8 @@ properties:
     schema:
       type: string
       enum: []
+  - name: user
+    required: false
+    schema:
+      type: string
+      enum: []
