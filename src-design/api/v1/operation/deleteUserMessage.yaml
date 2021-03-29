@@ -6,7 +6,7 @@ creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
 summary: Deletes a message
 type: DELETE
 tags:
-  - delete
+  - Message
 parameters:
   - /api/v1/parameter/MessageId
   - /api/v1/parameter/User
