@@ -1,0 +1,20 @@
+schemaVersion: /v1/apiSchema.schema.json
+comments: []
+creationTs: '1617012274032'
+creator: Ronny Krammer
+creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
+type: object
+title: Add Message
+allOfLinks: []
+properties:
+  - name: sender
+    required: false
+    schema:
+      type: string
+      title: Sender
+      enum: []
+  - name: text
+    required: true
+    schema:
+      type: array
+      itemsLink: /api/v1/schema/MessageContent

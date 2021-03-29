@@ -8,7 +8,7 @@ type: POST
 tags: []
 parameters:
   - /api/v1/parameter/User
-requestBody: /api/v1/requestBody/MessageRequestBody
+requestBody: /api/v1/requestBody/AddMessageRequestBody
 pathLink: '/api/v1/path/#messages#{user}'
 responses:
   - httpStatusCode: '200'
