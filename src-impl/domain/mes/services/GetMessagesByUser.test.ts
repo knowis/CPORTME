@@ -10,19 +10,18 @@ describe('mes:GetMessagesByUser', () => {
     // This is an optional block.
   });
   after(async () => {
-    // This block will run automatically after all tests.
-    // Alternatively, use afterEach() to define what should automatically happen after each test.
-    // This is an optional block.
-
-    // Recommended: remove all instances that were created
-    // await testEnvironment.cleanup();
+    await testEnvironment.cleanup();
   });
 
   it('works', async () => {
-    // const runner = new serviceRunners.mes_GetMessagesByUserRunner();
-    // await runner.run();
-    console.warn('No tests available');
-    expect(true).to.equal(true);
+    const runner = new serviceRunners.mes_GetMessagesByUserRunner();
+    const getMessagesByUserInput = testEnvironment.factory.entity.mes.GetMessagesByUser_Input();
+    getMessagesByUserInput.user = 'rkr';
+
+    runner.input = getMessagesByUserInput;
+    await runner.run();
+    const output = runner.output;
+    expect(output.length).above(0);
   });
 
 });

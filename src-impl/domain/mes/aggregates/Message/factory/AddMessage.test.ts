@@ -4,25 +4,29 @@ import { commandRunners, TestEnvironment } from 'solution-framework';
 describe('mes:AddMessage', () => {
 
   const testEnvironment = new TestEnvironment();
-  before(async () => {
-    // This block will run automatically before all tests.
-    // Alternatively, use beforeEach() to define what should automatically happen before each test.
-    // This is an optional block.
-  });
-  after(async () => {
-    // This block will run automatically after all tests.
-    // Alternatively, use afterEach() to define what should automatically happen after each test.
-    // This is an optional block.
 
-    // Recommended: remove all instances that were created
-    // await testEnvironment.cleanup();
+  after(async () => {
+    await testEnvironment.cleanup();
   });
 
   it('works', async () => {
-    // const runner = new commandRunners.mes_AddMessageRunner();
-    // await runner.run();
-    console.warn('No tests available');
-    expect(true).to.equal(true);
+    const runner = new commandRunners.mes_AddMessageRunner();
+
+    const content = testEnvironment.factory.entity.mes.MessageContent();
+    content.content = 'Text';
+
+    const addMessage = testEnvironment.factory.entity.mes.AddMessage_Input();
+    addMessage.sender = 'World Bank';
+    addMessage.user = 'rkr';
+    addMessage.text = [content];
+
+    runner.input = addMessage;
+
+    const newMessage = await runner.run();
+    expect(newMessage.sender).to.equal('World Bank');
+    expect(newMessage.user).to.equal('rkr');
+    expect(newMessage.text[0].content).to.equal('Text');
+    expect(newMessage._id).to.not.equal('');
   });
 
 });

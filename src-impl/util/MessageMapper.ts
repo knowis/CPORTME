@@ -1,5 +1,4 @@
 import { mappers, Context, ObjectSchemaObject, Entity } from 'solution-framework';
-import { dateformat } from 'dateformat';
 
 export class MessageMapper extends mappers.BaseMapper {
 
@@ -17,7 +16,7 @@ export class MessageMapper extends mappers.BaseMapper {
       schema.id = _id;
       schema.sender = sender;
       schema.text = text.map((messageContent) => messageContent.content);
-      schema.timestamp = dateformat(timestamp);
+      schema.timestamp = timestamp.toISOString();
       schema.user = user;
     }
     return schema;

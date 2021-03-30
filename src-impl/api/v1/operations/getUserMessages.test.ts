@@ -9,18 +9,16 @@ describe('getUserMessages', () => {
     // This is an optional block.
   });
   after(async () => {
-    // This block will run automatically after all tests.
-    // Alternatively, use afterEach() to define what should automatically happen after each test.
-    // This is an optional block.
-
-    // Recommended: remove all instances that were created
-    // await testEnvironment.cleanup();
+    await testEnvironment.cleanup();
   });
   it('works', async () => {
-    // const runner = new operationRunners.v1_getUserMessagesRunner();
-    // await runner.run();
-    console.warn('No tests available');
-    expect(true).to.equal(true);
+    const runner = new operationRunners.v1_getUserMessagesRunner();
+    runner.request.path.user = 'rkr';
+    const apiResponse = await runner.run();
+    expect(apiResponse.status).to.equal(200);
+
+    const messages = apiResponse.body;
+    expect(messages.length).greaterThan(0);
   });
 
 });
