@@ -3,24 +3,26 @@ import { operationRunners, TestEnvironment } from 'solution-framework';
 
 describe('addUserMessage', () => {
   const testEnvironment = new TestEnvironment();
-  before(async () => {
-    // This block will run automatically before all tests.
-    // Alternatively, use beforeEach() to define what should automatically happen before each test.
-    // This is an optional block.
-  });
-  after(async () => {
-    // This block will run automatically after all tests.
-    // Alternatively, use afterEach() to define what should automatically happen after each test.
-    // This is an optional block.
 
-    // Recommended: remove all instances that were created
-    // await testEnvironment.cleanup();
+  after(async () => {
+    await testEnvironment.cleanup();
   });
   it('works', async () => {
-    // const runner = new operationRunners.v1_addUserMessageRunner();
-    // await runner.run();
-    console.warn('No tests available');
-    expect(true).to.equal(true);
+    const runner = new operationRunners.v1_addUserMessageRunner();
+
+    const text = testEnvironment.factory.entity.mes.MessageContent();
+    text.content = 'Test message';
+
+    const message = testEnvironment.factory.entity.mes.Message();
+    message.sender = 'Test Sender';
+    message.user = 'testUser';
+    message.timestamp = new Date();
+    message.text = [ text ];
+
+    await message.persist();
+
+    const messageResponse = await runner.run();
+    expect(messageResponse.status).to.equal(200);
   });
 
 });

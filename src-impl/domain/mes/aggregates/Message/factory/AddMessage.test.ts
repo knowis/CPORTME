@@ -17,14 +17,14 @@ describe('mes:AddMessage', () => {
 
     const addMessage = testEnvironment.factory.entity.mes.AddMessage_Input();
     addMessage.sender = 'World Bank';
-    addMessage.user = 'rkr';
+    addMessage.user = 'testUser';
     addMessage.text = [content];
 
     runner.input = addMessage;
 
     const newMessage = await runner.run();
     expect(newMessage.sender).to.equal('World Bank');
-    expect(newMessage.user).to.equal('rkr');
+    expect(newMessage.user).to.equal('testUser');
     expect(newMessage.text[0].content).to.equal('Text');
     expect(newMessage._id).to.not.equal('');
   });
