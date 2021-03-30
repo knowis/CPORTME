@@ -10,7 +10,7 @@ tags:
 parameters:
   - /api/v1/parameter/MessageId
   - /api/v1/parameter/User
-requestBody: /api/v1/requestBody/MessageRequestBody
+requestBody: /api/v1/requestBody/ChangeMessageRequestBody
 pathLink: '/api/v1/path/#messages#{user}#{id}'
 responses:
   - httpStatusCode: '200'

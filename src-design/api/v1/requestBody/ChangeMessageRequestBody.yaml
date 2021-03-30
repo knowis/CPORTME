@@ -1,10 +1,10 @@
 schemaVersion: /v1/apiRequestBody.schema.json
 comments: []
-creationTs: '1617002588422'
+creationTs: '1617108533419'
 creator: Ronny Krammer
 creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
-description: Request body of a message
+description: Request body for changing a message
 required: true
 content:
   - contentType: application/json
-    schemaLink: /api/v1/schema/Message
+    schemaLink: /api/v1/schema/ChangeMessage
