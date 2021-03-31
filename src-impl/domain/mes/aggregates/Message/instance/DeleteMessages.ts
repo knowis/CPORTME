@@ -11,7 +11,7 @@ export default class extends commands.mes_DeleteMessages {
 
     const filterExpression = `user == "${user}"`;
 
-    const messages: mes_Message[] = await this.repo.mes.Message.find({sortBy: 'timestamp'}, filterExpression);
+    const messages: mes_Message[] = await this.repo.mes.Message.find({includeSubEntities: false}, filterExpression);
     messages.forEach((m: mes_Message) => m.delete());
   }
 

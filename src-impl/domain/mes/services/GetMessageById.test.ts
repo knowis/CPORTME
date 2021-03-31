@@ -3,26 +3,37 @@ import { serviceRunners, TestEnvironment } from 'solution-framework';
 
 describe('mes:GetMessageById', () => {
 
+  let aggregateId = '';
   const testEnvironment = new TestEnvironment();
   before(async () => {
-    // This block will run automatically before all tests.
-    // Alternatively, use beforeEach() to define what should automatically happen before each test.
-    // This is an optional block.
+    const text1 = testEnvironment.factory.entity.mes.MessageContent();
+    text1.content = 'Test message';
+
+    const message1 = testEnvironment.factory.entity.mes.Message();
+    message1.sender = 'Test Sender';
+    message1.user = 'testUser';
+    message1.timestamp = new Date();
+    message1.text = [text1];
+
+    await message1.persist();
+    aggregateId = message1._id;
   });
   after(async () => {
-    // This block will run automatically after all tests.
-    // Alternatively, use afterEach() to define what should automatically happen after each test.
-    // This is an optional block.
-
-    // Recommended: remove all instances that were created
-    // await testEnvironment.cleanup();
+    await testEnvironment.cleanup();
   });
 
   it('works', async () => {
-    // const runner = new serviceRunners.mes_GetMessageByIdRunner();
-    // await runner.run();
-    console.warn('No tests available');
-    expect(true).to.equal(true);
+    const runner = new serviceRunners.mes_GetMessageByIdRunner();
+    const getMessageByIdInput = testEnvironment.factory.entity.mes.GetMessageById_Input();
+    getMessageByIdInput.id = aggregateId;
+
+    runner.input = getMessageByIdInput;
+    await runner.run();
+    const output = runner.output;
+    expect(output.sender).to.equal('Test Sender');
+    expect(output.user).to.equal('testUser');
+    expect(output.text[0].content).to.equal('Test message');
+    expect(output._id).to.equal(aggregateId);
   });
 
 });

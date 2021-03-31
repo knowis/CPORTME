@@ -28,13 +28,13 @@ describe('mes:ChangeMessage', () => {
     const content = testEnvironment.factory.entity.mes.MessageContent();
     content.content = 'Changed Text';
 
-    const changeMessage = testEnvironment.factory.entity.mes.ChangeMessage_Input();
-    changeMessage.id = aggregateId;
-    changeMessage.sender = 'Change Test Bank';
-    changeMessage.user = 'testUser';
-    changeMessage.text = [content];
+    const changeMessageInput = testEnvironment.factory.entity.mes.ChangeMessage_Input();
+    changeMessageInput.id = aggregateId;
+    changeMessageInput.sender = 'Change Test Bank';
+    changeMessageInput.user = 'testUser';
+    changeMessageInput.text = [content];
 
-    runner.input = changeMessage;
+    runner.input = changeMessageInput;
     const changedMessage = await runner.run(aggregateId);
     expect(changedMessage._id).to.equal(aggregateId);
     const message = await testEnvironment.repo.mes.Message.findById(aggregateId);

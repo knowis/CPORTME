@@ -13,19 +13,19 @@ describe('mes:AddMessage', () => {
     const runner = new commandRunners.mes_AddMessageRunner();
 
     const content = testEnvironment.factory.entity.mes.MessageContent();
-    content.content = 'Text';
+    content.content = 'Test Message';
 
     const addMessage = testEnvironment.factory.entity.mes.AddMessage_Input();
-    addMessage.sender = 'World Bank';
+    addMessage.sender = 'Test Sender';
     addMessage.user = 'testUser';
     addMessage.text = [content];
 
     runner.input = addMessage;
 
     const newMessage = await runner.run();
-    expect(newMessage.sender).to.equal('World Bank');
+    expect(newMessage.sender).to.equal('Test Sender');
     expect(newMessage.user).to.equal('testUser');
-    expect(newMessage.text[0].content).to.equal('Text');
+    expect(newMessage.text[0].content).to.equal('Test Message');
     expect(newMessage._id).to.not.equal('');
   });
 
