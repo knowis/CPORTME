@@ -7,22 +7,30 @@ description: The schema definition of a message
 type: object
 title: Message
 allOfLinks:
-  - /api/v1/schema/AddMessage
+  - /api/v1/schema/MessageBase
 properties:
-  - name: timestamp
-    required: false
-    schema:
-      description: Timestamp as formated string
-      type: string
-      title: Timestamp
-      enum: []
   - name: id
     required: true
     schema:
       type: string
       enum: []
   - name: user
+    required: true
+    schema:
+      description: The message is for the user
+      type: string
+      enum: []
+  - name: createdOn
     required: false
     schema:
+      description: The message was created on
       type: string
+      title: createdOn
+      enum: []
+  - name: createdBy
+    required: false
+    schema:
+      description: The message was created by
+      type: string
+      title: Created by
       enum: []

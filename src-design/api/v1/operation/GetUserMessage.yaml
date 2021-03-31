@@ -12,16 +12,12 @@ parameters:
   - /api/v1/parameter/MessageId
 pathLink: '/api/v1/path/#messages#{user}#{id}'
 responses:
-  - httpStatusCode: '200'
-    response:
-      description: A message based on its id
-      content:
-        - contentType: application/json
-          schemaLink: /api/v1/schema/Message
   - httpStatusCode: '404'
     response:
       description: Message not found
       content: []
+  - httpStatusCode: '200'
+    response: /api/v1/response/MessageRespone
 documentation:
   fileLink: /api/v1/operation/GetUserMessage.md
   schemaVersion: /v1/documentation.schema.json

@@ -1,10 +1,10 @@
 schemaVersion: /v3/apiOperation.schema.json
 comments: []
-creationTs: '1617002872445'
+creationTs: '1617187640243'
 creator: Ronny Krammer
 creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
-summary: Deletes all messages
-type: DELETE
+summary: Gets all messages
+type: GET
 tags:
   - All Messages
 parameters: []
@@ -12,11 +12,13 @@ pathLink: /api/v1/path/#messages
 responses:
   - httpStatusCode: '200'
     response:
-      description: All messages are deleted
-      content: []
+      description: All messages
+      content:
+        - contentType: application/json
+          schemaLink: /api/v1/schema/Messages
 documentation:
-  fileLink: /api/v1/operation/deleteAllMessages.md
+  fileLink: /api/v1/operation/getAllMessages.md
   schemaVersion: /v1/documentation.schema.json
-  creationTs: '1617002872473'
+  creationTs: '1617187640275'
   creator: Ronny Krammer
   creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341

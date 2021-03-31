@@ -9,13 +9,11 @@ tags:
   - User Messages
 parameters:
   - /api/v1/parameter/User
-requestBody: /api/v1/requestBody/AddMessageRequestBody
+requestBody: /api/v1/requestBody/StoreMessageRequestBody
 pathLink: '/api/v1/path/#messages#{user}'
 responses:
   - httpStatusCode: '200'
-    response:
-      description: The message was saved for the user
-      content: []
+    response: /api/v1/response/MessageRespone
 documentation:
   fileLink: /api/v1/operation/addUserMessage.md
   schemaVersion: /v1/documentation.schema.json
