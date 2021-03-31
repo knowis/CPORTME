@@ -5,7 +5,7 @@
 
 ## Diagram
 ``` fsw
-service mes:GetMessagesByUser
+service mes:DeleteUserMessagesService
 ```
 
 <br />

@@ -1,22 +1,22 @@
 schemaVersion: /v3/entity.schema.json
 type: entity
-creationTs: '1617009817761'
+creationTs: '1617193153627'
 creator: Ronny Krammer
 creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
 comments: []
 isAbstract: false
 documentation:
-  fileLink: /domain/mes/entity/GetMessageById_Input.md
+  fileLink: /domain/mes/entity/ReadUserMessagesService_Input.md
   schemaVersion: /v1/documentation.schema.json
-  creationTs: '1617009817793'
+  creationTs: '1617193153658'
   creator: Ronny Krammer
   creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
-label: GetMessage by Id Input
+label: Read User Messages Service Input
 parentLinks: []
 properties:
   - mappingType: value
-    isMandatory: true
-    propertyDefinitionLink: /domain/mes/propertyDefinition/id
-    propertyName: id
+    isMandatory: false
+    propertyDefinitionLink: /domain/mes/propertyDefinition/user
+    propertyName: user
 constructorProperties: []
 isLocallyManaged: true

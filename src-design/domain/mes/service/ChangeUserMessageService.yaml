@@ -1,17 +1,17 @@
 schemaVersion: /v2/service.schema.json
 comments: []
-creationTs: '1617007020697'
+creationTs: '1617196870063'
 creator: Ronny Krammer
 creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
-label: GetMessage by Id
+notes: Service that changes the message for the user
+label: Change User Message Service
 type: domain
-inputEntityLink: /domain/mes/entity/GetMessageById_Input
-outputEntityLink: /domain/mes/entity/Message
+inputEntityLink: /domain/mes/entity/ChangeUserMessageService_Input
 mappedBusinessErrorLinks: []
 mappedBusinessEventLinks: []
 documentation:
-  fileLink: /domain/mes/service/GetMessageById.md
+  fileLink: /domain/mes/service/ChangeUserMessageService.md
   schemaVersion: /v1/documentation.schema.json
-  creationTs: '1617007020725'
+  creationTs: '1617196870100'
   creator: Ronny Krammer
   creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341

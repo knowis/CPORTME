@@ -1,16 +1,16 @@
-schemaVersion: /v2/command.schema.json
+schemaVersion: /v2/service.schema.json
 comments: []
-creationTs: '1617006941200'
+creationTs: '1617194188262'
 creator: Ronny Krammer
 creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
+notes: Service that deletes all messages
 label: Delete All Messages
-type: instance
-baseEntityLink: /domain/mes/entity/Message
+type: domain
 mappedBusinessErrorLinks: []
 mappedBusinessEventLinks: []
 documentation:
-  fileLink: /domain/mes/command/DeleteAllMessages.md
+  fileLink: /domain/mes/service/DeleteAllMessagesService.md
   schemaVersion: /v1/documentation.schema.json
-  creationTs: '1617006941227'
+  creationTs: '1617194188289'
   creator: Ronny Krammer
   creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341

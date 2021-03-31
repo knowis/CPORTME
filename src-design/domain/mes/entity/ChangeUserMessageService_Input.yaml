@@ -1,38 +1,34 @@
 schemaVersion: /v3/entity.schema.json
-type: root
-creationTs: '1617005731662'
+type: entity
+creationTs: '1617196878369'
 creator: Ronny Krammer
 creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
 comments: []
 isAbstract: false
 documentation:
-  fileLink: /domain/mes/entity/Message.md
+  fileLink: /domain/mes/entity/ChangeUserMessageService_Input.md
   schemaVersion: /v1/documentation.schema.json
-  creationTs: '1617005731694'
+  creationTs: '1617196878401'
   creator: Ronny Krammer
   creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
-label: Message
+label: Change User Message Service Input
 parentLinks: []
-dbCollectionLink: /domain/mes/dbCollection/messages
 properties:
+  - mappingType: value
+    isMandatory: true
+    propertyDefinitionLink: /domain/mes/propertyDefinition/id
+    propertyName: id
   - mappingType: value
     isMandatory: false
     propertyDefinitionLink: /domain/mes/propertyDefinition/sender
     propertyName: sender
   - mappingType: value
     isMandatory: true
-    propertyDefinitionLink: /domain/mes/propertyDefinition/text
-    propertyName: text
-  - mappingType: value
-    isMandatory: true
     propertyDefinitionLink: /domain/mes/propertyDefinition/user
     propertyName: user
   - mappingType: value
     isMandatory: true
-    propertyDefinitionLink: /domain/mes/propertyDefinition/createdBy
-    propertyName: createdBy
-  - mappingType: value
-    isMandatory: true
-    propertyDefinitionLink: /domain/mes/propertyDefinition/createdOn
-    propertyName: createdOn
+    propertyDefinitionLink: /domain/mes/propertyDefinition/text
+    propertyName: text
 constructorProperties: []
+isLocallyManaged: true

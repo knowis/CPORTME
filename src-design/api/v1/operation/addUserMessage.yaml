@@ -12,8 +12,10 @@ parameters:
 requestBody: /api/v1/requestBody/StoreMessageRequestBody
 pathLink: '/api/v1/path/#messages#{user}'
 responses:
-  - httpStatusCode: '200'
-    response: /api/v1/response/MessageRespone
+  - httpStatusCode: '201'
+    response:
+      description: The message was created successfully
+      content: []
 documentation:
   fileLink: /api/v1/operation/addUserMessage.md
   schemaVersion: /v1/documentation.schema.json

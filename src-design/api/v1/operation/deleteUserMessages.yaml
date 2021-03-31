@@ -11,9 +11,9 @@ parameters:
   - /api/v1/parameter/User
 pathLink: '/api/v1/path/#messages#{user}'
 responses:
-  - httpStatusCode: '200'
+  - httpStatusCode: '204'
     response:
-      description: All of the users messages have been deleted
+      description: All messages for the user have been deleted successfully
       content: []
 documentation:
   fileLink: /api/v1/operation/deleteUserMessages.md

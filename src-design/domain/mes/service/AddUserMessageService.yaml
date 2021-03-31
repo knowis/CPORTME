@@ -1,0 +1,17 @@
+schemaVersion: /v2/service.schema.json
+comments: []
+creationTs: '1617195658928'
+creator: Ronny Krammer
+creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
+notes: Service that adds a message for a user
+label: Add User Message Service
+type: domain
+inputEntityLink: /domain/mes/entity/AddUserMessageService_Input
+mappedBusinessErrorLinks: []
+mappedBusinessEventLinks: []
+documentation:
+  fileLink: /domain/mes/service/AddUserMessageService.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1617195659104'
+  creator: Ronny Krammer
+  creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341

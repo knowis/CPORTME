@@ -13,13 +13,13 @@ parameters:
 requestBody: /api/v1/requestBody/StoreMessageRequestBody
 pathLink: '/api/v1/path/#messages#{user}#{id}'
 responses:
-  - httpStatusCode: '200'
-    response:
-      description: The message has been updated
-      content: []
   - httpStatusCode: '404'
     response:
       description: The message was not found
+      content: []
+  - httpStatusCode: '201'
+    response:
+      description: The message was modified successfully
       content: []
 documentation:
   fileLink: /api/v1/operation/updateUserMessage.md

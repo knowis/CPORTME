@@ -1,0 +1,19 @@
+schemaVersion: /v2/service.schema.json
+comments: []
+creationTs: '1617192919700'
+creator: Ronny Krammer
+creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
+notes: Service that returns messages from a user
+label: Read User Messages Service
+type: domain
+inputEntityLink: /domain/mes/entity/ReadUserMessagesService_Input
+outputEntityLink: /domain/mes/entity/Message
+outputIsEntityList: true
+mappedBusinessErrorLinks: []
+mappedBusinessEventLinks: []
+documentation:
+  fileLink: /domain/mes/service/ReadUserMessagesService.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1617192919731'
+  creator: Ronny Krammer
+  creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341

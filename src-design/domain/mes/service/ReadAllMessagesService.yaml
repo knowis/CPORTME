@@ -1,0 +1,18 @@
+schemaVersion: /v2/service.schema.json
+comments: []
+creationTs: '1617194385371'
+creator: Ronny Krammer
+creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
+notes: Service the returns all messages
+label: Read All Messages Service
+type: domain
+outputEntityLink: /domain/mes/entity/Message
+outputIsEntityList: true
+mappedBusinessErrorLinks: []
+mappedBusinessEventLinks: []
+documentation:
+  fileLink: /domain/mes/service/ReadAllMessagesService.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1617194385398'
+  creator: Ronny Krammer
+  creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341

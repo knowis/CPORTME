@@ -1,18 +1,17 @@
 schemaVersion: /v2/service.schema.json
 comments: []
-creationTs: '1617007038189'
+creationTs: '1617193890526'
 creator: Ronny Krammer
 creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
-label: GetMessages by User
+notes: Service that delete a message from a user by ID
+label: Delete User Message Service
 type: domain
-inputEntityLink: /domain/mes/entity/GetMessagesByUser_Input
-outputEntityLink: /domain/mes/entity/Message
-outputIsEntityList: true
+inputEntityLink: /domain/mes/entity/DeleteUserMessageService_Input
 mappedBusinessErrorLinks: []
 mappedBusinessEventLinks: []
 documentation:
-  fileLink: /domain/mes/service/GetMessagesByUser.md
+  fileLink: /domain/mes/service/DeleteUserMessageService.md
   schemaVersion: /v1/documentation.schema.json
-  creationTs: '1617007038216'
+  creationTs: '1617193890558'
   creator: Ronny Krammer
   creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341

@@ -10,9 +10,9 @@ tags:
 parameters: []
 pathLink: /api/v1/path/#messages
 responses:
-  - httpStatusCode: '200'
+  - httpStatusCode: '204'
     response:
-      description: All messages are deleted
+      description: All messages have been deleted successfully
       content: []
 documentation:
   fileLink: /api/v1/operation/deleteAllMessages.md
