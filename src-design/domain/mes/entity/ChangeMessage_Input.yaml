@@ -15,7 +15,7 @@ label: Change Message Input
 parentLinks: []
 properties:
   - mappingType: value
-    isMandatory: true
+    isMandatory: false
     propertyDefinitionLink: /domain/mes/propertyDefinition/id
     propertyName: id
   - mappingType: value
@@ -26,7 +26,7 @@ properties:
     isMandatory: false
     propertyDefinitionLink: /domain/mes/propertyDefinition/user
     propertyName: user
-  - mappingType: range
+  - mappingType: value
     isMandatory: false
     propertyDefinitionLink: /domain/mes/propertyDefinition/text
     propertyName: text

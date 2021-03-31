@@ -22,9 +22,5 @@ properties:
     isMandatory: false
     propertyDefinitionLink: /domain/mes/propertyDefinition/user
     propertyName: user
-  - mappingType: range
-    isMandatory: false
-    propertyDefinitionLink: /domain/mes/propertyDefinition/text
-    propertyName: text
 constructorProperties: []
 isLocallyManaged: true

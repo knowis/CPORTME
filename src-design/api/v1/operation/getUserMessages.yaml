@@ -3,7 +3,7 @@ comments: []
 creationTs: '1617004182468'
 creator: Ronny Krammer
 creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
-summary: Gets the users messages
+summary: Gets all messages for a user
 type: GET
 tags:
   - User Messages

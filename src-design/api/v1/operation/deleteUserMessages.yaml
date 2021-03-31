@@ -3,7 +3,7 @@ comments: []
 creationTs: '1617004291944'
 creator: Ronny Krammer
 creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
-summary: Deletes a users messages
+summary: Deletes all messages from the user
 type: DELETE
 tags:
   - User Messages
