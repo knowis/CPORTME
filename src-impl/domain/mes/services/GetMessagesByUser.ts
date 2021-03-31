@@ -9,6 +9,8 @@ export default class extends services.mes_GetMessagesByUser {
     const { user } = this.input;
     const filterExpression = `user == "${user}"`;
 
+    // search for utility for filtering
+
     this.output = await this.repo.mes.Message.find({sortBy: 'timestamp,DESC'}, filterExpression);
   }
 

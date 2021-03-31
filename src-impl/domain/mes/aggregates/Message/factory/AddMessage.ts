@@ -12,7 +12,8 @@ export default class extends commands.mes_AddMessage {
     this.instance.sender = sender;
     this.instance.user = user;
     this.instance.text = text;
-    this.instance.timestamp = new Date();
+    this.instance.createdOn = new Date();
+    this.instance.createdBy = this.requestContext.user.username;
 
     await this.instance.persist();
   }

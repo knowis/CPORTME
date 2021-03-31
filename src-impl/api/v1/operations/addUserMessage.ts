@@ -10,11 +10,7 @@ export default class extends operations.v1_addUserMessage {
     const AddMessageInput = this.factory.entity.mes.AddMessage_Input();
     AddMessageInput.sender = sender;
     AddMessageInput.user = user;
-    AddMessageInput.text = text.map((content) => {
-      const messageContent = this.factory.entity.mes.MessageContent();
-      messageContent.content = content;
-      return messageContent;
-    });
+    AddMessageInput.text = text;
 
     void await this.repo.mes.Message.AddMessage(AddMessageInput);
     this.response.status = 200;

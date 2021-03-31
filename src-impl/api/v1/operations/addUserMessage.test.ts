@@ -10,14 +10,12 @@ describe('addUserMessage', () => {
   it('works', async () => {
     const runner = new operationRunners.v1_addUserMessageRunner();
 
-    const text = testEnvironment.factory.entity.mes.MessageContent();
-    text.content = 'Test message';
-
     const message = testEnvironment.factory.entity.mes.Message();
     message.sender = 'Test Sender';
     message.user = 'testUser';
-    message.timestamp = new Date();
-    message.text = [ text ];
+    message.text = 'Test message';
+    message.createdOn = new Date();
+    message.createdBy = 'system';
 
     await message.persist();
 

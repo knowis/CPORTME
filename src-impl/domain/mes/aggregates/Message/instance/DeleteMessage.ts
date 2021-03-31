@@ -8,6 +8,9 @@ export default class extends commands.mes_DeleteMessage {
 
     const { id } = this.input;
 
+    // Try out
+    await this.instance.delete();
+
     this.instance = await this.repo.mes.Message.findById(id);
 
     await this.instance.delete();

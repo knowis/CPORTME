@@ -6,13 +6,14 @@ export default class extends commands.mes_ChangeMessage {
     const log = this.util.log;
     log.debug('mes_ChangeMessage.execute()');
 
-    const { id, sender, user, text } = this.input;
+    const { sender, user, text } = this.input;
 
-    this.instance = await this.repo.mes.Message.findById(id);
+    // try out
+    // this.instance = await this.repo.mes.Message.findById(id);
+
     this.instance.sender = sender;
     this.instance.user = user;
     this.instance.text = text;
-    this.instance.timestamp = new Date();
 
     await this.instance.persist();
   }

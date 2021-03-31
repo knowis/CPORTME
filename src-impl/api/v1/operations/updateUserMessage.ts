@@ -12,11 +12,7 @@ export default class extends operations.v1_updateUserMessage {
     changeMessageInput.id = id;
     changeMessageInput.user = user;
     changeMessageInput.sender = sender;
-    changeMessageInput.text = text.map((content) => {
-      const messageContent = this.factory.entity.mes.MessageContent();
-      messageContent.content = content;
-      return messageContent;
-    });
+    changeMessageInput.text = text;
 
     void await this.factory.entity.mes.Message().ChangeMessage(changeMessageInput);
     this.response.status = 200;

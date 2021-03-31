@@ -1,6 +1,6 @@
 import { operations } from 'solution-framework';
 import { v1_Message } from 'solution-framework/dist/sdk/v1/namespace/schema/v1_Message';
-import { MessageMapper } from '../../../util/MessageMapper';
+import { Mapper } from '../../../util/Mapper';
 export default class extends operations.v1_GetUserMessage {
 
   public async execute(): Promise<void> {
@@ -13,8 +13,8 @@ export default class extends operations.v1_GetUserMessage {
 
     const message = await this.services.mes.GetMessageById(getMessagesByUserInput);
 
-    const Mapper = new MessageMapper(this.context);
-    this.response.body = Mapper.mapEntityToSchema(message) as v1_Message;
+    const MessageMapper = new Mapper(this.context);
+    this.response.body = MessageMapper.mapEntityToSchema(message) as v1_Message;
     this.response.status = 200;
   }
 

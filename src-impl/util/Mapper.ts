@@ -21,9 +21,17 @@ export class Mapper extends mappers.BaseMapper {
   public mapEntityToSchema(entity: Entity): ObjectSchemaObject {
     const log = this.log;
     log.debug('mapEntityToSchema()');
-    // Add mapping implementation
-
-    return null;
+    const schema = this.factory.schema.v1.Message();
+    if (this.instanceOf.entity.mes.Message(entity)) {
+      const { _id, sender, text, user, createdOn, createdBy } = entity;
+      schema.id = _id;
+      schema.sender = sender;
+      schema.text = text;
+      schema.createdOn = createdOn.toISOString();
+      schema.createdBy = createdBy;
+      schema.user = user;
+    }
+    return schema;
   }
 
   // Add any other specific mapping methods
