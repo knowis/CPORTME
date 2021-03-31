@@ -21,14 +21,18 @@ properties:
     propertyName: sender
   - mappingType: value
     isMandatory: false
-    propertyDefinitionLink: /domain/mes/propertyDefinition/timestamp
-    propertyName: timestamp
-  - mappingType: range
-    isMandatory: false
     propertyDefinitionLink: /domain/mes/propertyDefinition/text
     propertyName: text
   - mappingType: value
     isMandatory: false
     propertyDefinitionLink: /domain/mes/propertyDefinition/user
     propertyName: user
+  - mappingType: value
+    isMandatory: false
+    propertyDefinitionLink: /domain/mes/propertyDefinition/createdBy
+    propertyName: createdBy
+  - mappingType: value
+    isMandatory: false
+    propertyDefinitionLink: /domain/mes/propertyDefinition/createdOn
+    propertyName: createdOn
 constructorProperties: []

@@ -1,15 +1,13 @@
 schemaVersion: /v2/propertyDefinition.schema.json
 comments: []
-creationTs: '1617005804141'
+creationTs: '1617185081680'
 creator: Ronny Krammer
 creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
 label: Text
-isList: true
-type: localEntity
-rangeLink: /domain/mes/entity/MessageContent
+type: text
 documentation:
   fileLink: /domain/mes/propertyDefinition/text.md
   schemaVersion: /v1/documentation.schema.json
-  creationTs: '1617005804167'
+  creationTs: '1617185081707'
   creator: Ronny Krammer
   creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341

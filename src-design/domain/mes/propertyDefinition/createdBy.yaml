@@ -1,13 +1,14 @@
 schemaVersion: /v2/propertyDefinition.schema.json
 comments: []
-creationTs: '1617005532503'
+creationTs: '1617185580751'
 creator: Ronny Krammer
 creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
-label: Content
+notes: The user logged on to the system
+label: Created By
 type: text
 documentation:
-  fileLink: /domain/mes/propertyDefinition/content.md
+  fileLink: /domain/mes/propertyDefinition/createdBy.md
   schemaVersion: /v1/documentation.schema.json
-  creationTs: '1617005532539'
+  creationTs: '1617185580789'
   creator: Ronny Krammer
   creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
