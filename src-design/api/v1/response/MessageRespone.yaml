@@ -1,0 +1,9 @@
+schemaVersion: /v1/apiResponse.schema.json
+comments: []
+creationTs: '1617187325478'
+creator: Ronny Krammer
+creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
+description: The stored message
+content:
+  - contentType: application/json
+    schemaLink: /api/v1/schema/Message

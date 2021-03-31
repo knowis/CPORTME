@@ -1,20 +1,24 @@
 schemaVersion: /v1/apiSchema.schema.json
 comments: []
-creationTs: '1617012274032'
+creationTs: '1617186326619'
 creator: Ronny Krammer
 creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
+description: The base schema definition of a message
 type: object
-title: Add Message
+title: Message Base
 allOfLinks: []
 properties:
   - name: sender
     required: false
     schema:
+      description: The sender of the message
       type: string
       title: Sender
       enum: []
   - name: text
     required: true
     schema:
-      type: array
-      itemsLink: /api/v1/schema/MessageContent
+      description: Text of the message
+      type: string
+      title: Text
+      enum: []

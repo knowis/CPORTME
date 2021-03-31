@@ -1,9 +1,0 @@
-schemaVersion: /v1/apiSchema.schema.json
-comments: []
-creationTs: '1617002059585'
-creator: Ronny Krammer
-creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
-description: Content of a message. Used as the schema type for an array.
-type: string
-title: Message Content
-enum: []
