@@ -4,8 +4,8 @@
 <br />
 
 ## Diagram
-``` fsw
-operation v1:updateUserMessage
+```fsw
+operation v1:markReadStatus
 ```
 
 <br />

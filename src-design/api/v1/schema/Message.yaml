@@ -8,6 +8,7 @@ type: object
 title: Message
 allOfLinks:
   - /api/v1/schema/MessageBase
+  - /api/v1/schema/ReadStatus
 properties:
   - name: id
     required: true

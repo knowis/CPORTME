@@ -1,29 +1,25 @@
 schemaVersion: /v3/apiOperation.schema.json
 comments: []
-creationTs: '1617004785105'
+creationTs: '1617280864214'
 creator: Ronny Krammer
 creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
-summary: Updates a message
+summary: Marks read status
 type: PUT
 tags:
   - Message
 parameters:
   - /api/v1/parameter/MessageId
   - /api/v1/parameter/User
-requestBody: /api/v1/requestBody/StoreMessageRequestBody
+requestBody: /api/v1/requestBody/MarkReadStatusRequestBody
 pathLink: '/api/v1/path/#messages#{user}#{id}'
 responses:
-  - httpStatusCode: '404'
-    response:
-      description: The message was not found
-      content: []
   - httpStatusCode: '201'
     response:
-      description: The message was modified successfully
+      description: Read status of the message is marked
       content: []
 documentation:
-  fileLink: /api/v1/operation/updateUserMessage.md
+  fileLink: /api/v1/operation/markReadStatus.md
   schemaVersion: /v1/documentation.schema.json
-  creationTs: '1617004785141'
+  creationTs: '1617280864242'
   creator: Ronny Krammer
   creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
