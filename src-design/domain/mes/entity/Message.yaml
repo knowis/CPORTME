@@ -28,7 +28,7 @@ properties:
     propertyDefinitionLink: /domain/mes/propertyDefinition/user
     propertyName: user
   - mappingType: value
-    isMandatory: true
+    isMandatory: false
     propertyDefinitionLink: /domain/mes/propertyDefinition/read
     propertyName: read
   - mappingType: value
