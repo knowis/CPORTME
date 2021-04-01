@@ -15,7 +15,7 @@ label: Mark Read Status Input
 parentLinks: []
 properties:
   - mappingType: value
-    isMandatory: false
+    isMandatory: true
     propertyDefinitionLink: /domain/mes/propertyDefinition/read
     propertyName: read
 constructorProperties: []
