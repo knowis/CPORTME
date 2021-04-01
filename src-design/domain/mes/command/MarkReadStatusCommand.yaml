@@ -1,17 +1,17 @@
 schemaVersion: /v2/command.schema.json
 comments: []
-creationTs: '1617006968262'
+creationTs: '1617277513506'
 creator: Ronny Krammer
 creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
-label: Add Message
-type: factory
+label: Mark Read Status Command
+type: instance
 baseEntityLink: /domain/mes/entity/Message
-inputEntityLink: /domain/mes/entity/AddMessage_Input
+inputEntityLink: /domain/mes/entity/MarkReadStatusCommand_Input
 mappedBusinessErrorLinks: []
 mappedBusinessEventLinks: []
 documentation:
-  fileLink: /domain/mes/command/AddMessage.md
+  fileLink: /domain/mes/command/MarkReadStatusCommand.md
   schemaVersion: /v1/documentation.schema.json
-  creationTs: '1617006968292'
+  creationTs: '1617277513534'
   creator: Ronny Krammer
   creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341

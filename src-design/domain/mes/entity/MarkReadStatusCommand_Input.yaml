@@ -1,22 +1,22 @@
 schemaVersion: /v3/entity.schema.json
 type: entity
-creationTs: '1617006128168'
+creationTs: '1617277535537'
 creator: Ronny Krammer
 creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
 comments: []
 isAbstract: false
 documentation:
-  fileLink: /domain/mes/entity/DeleteMessage_Input.md
+  fileLink: /domain/mes/entity/MarkReadStatusCommand_Input.md
   schemaVersion: /v1/documentation.schema.json
-  creationTs: '1617006128195'
+  creationTs: '1617277535574'
   creator: Ronny Krammer
   creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
-label: Delete Message Input
+label: Mark Read Status Input
 parentLinks: []
 properties:
   - mappingType: value
-    isMandatory: true
-    propertyDefinitionLink: /domain/mes/propertyDefinition/id
-    propertyName: id
+    isMandatory: false
+    propertyDefinitionLink: /domain/mes/propertyDefinition/read
+    propertyName: read
 constructorProperties: []
 isLocallyManaged: true

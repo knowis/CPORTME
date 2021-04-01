@@ -7,6 +7,7 @@ notes: Service that adds a message for a user
 label: Add User Message Service
 type: domain
 inputEntityLink: /domain/mes/entity/AddUserMessageService_Input
+outputEntityLink: /domain/mes/entity/Message
 mappedBusinessErrorLinks: []
 mappedBusinessEventLinks: []
 documentation:

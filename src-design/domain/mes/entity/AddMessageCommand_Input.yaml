@@ -1,33 +1,29 @@
 schemaVersion: /v3/entity.schema.json
 type: entity
-creationTs: '1617006857599'
+creationTs: '1617277672665'
 creator: Ronny Krammer
 creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
 comments: []
 isAbstract: false
 documentation:
-  fileLink: /domain/mes/entity/ChangeMessage_Input.md
+  fileLink: /domain/mes/entity/AddMessageCommand_Input.md
   schemaVersion: /v1/documentation.schema.json
-  creationTs: '1617006857631'
+  creationTs: '1617277672700'
   creator: Ronny Krammer
   creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
-label: Change Message Input
+label: Add Message Command Input
 parentLinks: []
 properties:
-  - mappingType: value
-    isMandatory: false
-    propertyDefinitionLink: /domain/mes/propertyDefinition/id
-    propertyName: id
   - mappingType: value
     isMandatory: false
     propertyDefinitionLink: /domain/mes/propertyDefinition/sender
     propertyName: sender
   - mappingType: value
-    isMandatory: false
+    isMandatory: true
     propertyDefinitionLink: /domain/mes/propertyDefinition/user
     propertyName: user
   - mappingType: value
-    isMandatory: false
+    isMandatory: true
     propertyDefinitionLink: /domain/mes/propertyDefinition/text
     propertyName: text
 constructorProperties: []
