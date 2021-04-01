@@ -1,0 +1,17 @@
+schemaVersion: /v2/service.schema.json
+comments: []
+creationTs: '1617277969999'
+creator: Ronny Krammer
+creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
+notes: 'Service that marks the read status of a message '
+label: Mark Read Status Service
+type: domain
+inputEntityLink: /domain/mes/entity/MarkReadStatusService_Input
+mappedBusinessErrorLinks: []
+mappedBusinessEventLinks: []
+documentation:
+  fileLink: /domain/mes/service/MarkReadStatusService.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1617277970035'
+  creator: Ronny Krammer
+  creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341

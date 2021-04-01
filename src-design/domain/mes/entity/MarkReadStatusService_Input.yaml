@@ -1,0 +1,26 @@
+schemaVersion: /v3/entity.schema.json
+type: entity
+creationTs: '1617277982048'
+creator: Ronny Krammer
+creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
+comments: []
+isAbstract: false
+documentation:
+  fileLink: /domain/mes/entity/MarkReadStatusService_Input.md
+  schemaVersion: /v1/documentation.schema.json
+  creationTs: '1617277982075'
+  creator: Ronny Krammer
+  creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
+label: Mark Read Status Service Input
+parentLinks: []
+properties:
+  - mappingType: value
+    isMandatory: true
+    propertyDefinitionLink: /domain/mes/propertyDefinition/id
+    propertyName: id
+  - mappingType: value
+    isMandatory: true
+    propertyDefinitionLink: /domain/mes/propertyDefinition/read
+    propertyName: read
+constructorProperties: []
+isLocallyManaged: true
