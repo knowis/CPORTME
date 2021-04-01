@@ -4,8 +4,8 @@
 <br />
 
 ## Diagram
-``` fsw
-operation v1:GetUserMessage
+```fsw
+operation v1:getUserMessage
 ```
 
 <br />

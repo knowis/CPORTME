@@ -1,26 +1,26 @@
 schemaVersion: /v3/apiOperation.schema.json
 comments: []
-creationTs: '1617004526577'
+creationTs: '1617282716629'
 creator: Ronny Krammer
 creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
-summary: Gets a message
+summary: Gets the user message
 type: GET
 tags:
   - Message
 parameters:
-  - /api/v1/parameter/User
   - /api/v1/parameter/MessageId
+  - /api/v1/parameter/User
 pathLink: '/api/v1/path/#messages#{user}#{id}'
 responses:
+  - httpStatusCode: '200'
+    response: /api/v1/response/MessageRespone
   - httpStatusCode: '404'
     response:
       description: Message not found
       content: []
-  - httpStatusCode: '200'
-    response: /api/v1/response/MessageRespone
 documentation:
-  fileLink: /api/v1/operation/GetUserMessage.md
+  fileLink: /api/v1/operation/getUserMessage.md
   schemaVersion: /v1/documentation.schema.json
-  creationTs: '1617004526715'
+  creationTs: '1617282716666'
   creator: Ronny Krammer
   creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
