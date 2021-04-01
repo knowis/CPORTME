@@ -1,26 +1,24 @@
 import { expect } from 'chai';
 import { operationRunners, TestEnvironment } from 'solution-framework';
 
-describe('addUserMessage', () => {
+describe('Test API addUserMessage', () => {
   const testEnvironment = new TestEnvironment();
 
   after(async () => {
     await testEnvironment.cleanup();
   });
-  it('works', async () => {
+  it('Add a message for a user', async () => {
     const runner = new operationRunners.v1_addUserMessageRunner();
+    runner.request.path.user = 'testUser';
 
-    const message = testEnvironment.factory.entity.mes.Message();
-    message.sender = 'Test Sender';
-    message.user = 'testUser';
-    message.text = 'Test message';
-    message.createdOn = new Date();
-    message.createdBy = 'system';
+    const requestBody = testEnvironment.factory.schema.v1.MessageBase();
+    requestBody.sender = 'Test Sender';
+    requestBody.text = 'Test message';
 
-    await message.persist();
+    runner.request.body = requestBody;
 
     const messageResponse = await runner.run();
-    expect(messageResponse.status).to.equal(200);
+    expect(messageResponse.status).to.equal(201);
   });
 
 });

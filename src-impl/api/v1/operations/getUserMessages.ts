@@ -8,10 +8,10 @@ export default class extends operations.v1_getUserMessages {
     log.debug('v1_getUserMessages.execute()');
 
     const user = this.request.path.user;
-    const getMessagesByUserInput = this.factory.entity.mes.GetMessagesByUser_Input();
-    getMessagesByUserInput.user = user;
+    const readUserMessagesServiceInput = this.factory.entity.mes.ReadUserMessagesService_Input();
+    readUserMessagesServiceInput.user = user;
 
-    const messages = await this.services.mes.GetMessagesByUser(getMessagesByUserInput);
+    const messages = await this.services.mes.ReadUserMessagesService(readUserMessagesServiceInput);
 
     const MessageMapper = new Mapper(this.context);
     const respMessages = this.factory.schema.v1.Messages();

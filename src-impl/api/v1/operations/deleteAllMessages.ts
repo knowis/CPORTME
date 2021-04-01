@@ -5,8 +5,8 @@ export default class extends operations.v1_deleteAllMessages {
     const log = this.util.log;
     log.debug('v1_deleteAllMessages.execute()');
 
-    void await this.factory.entity.mes.Message().DeleteAllMessages();
-    this.response.status = 200;
+    void await this.services.mes.DeleteAllMessagesService();
+    this.response.status = 204;
   }
 
   /**

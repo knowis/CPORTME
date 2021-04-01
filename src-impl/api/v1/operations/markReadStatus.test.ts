@@ -1,7 +1,8 @@
 import { expect } from 'chai';
 import { operationRunners, TestEnvironment } from 'solution-framework';
 
-describe('updateUserMessage', () => {
+
+describe('markReadStatus', () => {
   const testEnvironment = new TestEnvironment();
   before(async () => {
     // This block will run automatically before all tests.
@@ -17,7 +18,7 @@ describe('updateUserMessage', () => {
     // await testEnvironment.cleanup();
   });
   it('works', async () => {
-    // const runner = new operationRunners.v1_updateUserMessageRunner();
+    // const runner = new operationRunners.v1_markReadStatusRunner();
     // await runner.run();
     console.warn('No tests available');
     expect(true).to.equal(true);

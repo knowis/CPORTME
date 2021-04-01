@@ -23,10 +23,11 @@ export class Mapper extends mappers.BaseMapper {
     log.debug('mapEntityToSchema()');
     const schema = this.factory.schema.v1.Message();
     if (this.instanceOf.entity.mes.Message(entity)) {
-      const { _id, sender, text, user, createdOn, createdBy } = entity;
+      const { _id, sender, text, user, read, createdOn, createdBy } = entity;
       schema.id = _id;
       schema.sender = sender;
       schema.text = text;
+      schema.read = read;
       schema.createdOn = createdOn.toISOString();
       schema.createdBy = createdBy;
       schema.user = user;

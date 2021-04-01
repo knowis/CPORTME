@@ -5,11 +5,11 @@ export default class extends operations.v1_deleteUserMessages {
     const log = this.util.log;
     log.debug('v1_deleteUserMessages.execute()');
     const user = this.request.path.user;
-    const DeleteMessagesInput = this.factory.entity.mes.DeleteMessages_Input();
-    DeleteMessagesInput.user = user;
+    const deleteUserMessagesServiceInput = this.factory.entity.mes.DeleteUserMessagesService_Input();
+    deleteUserMessagesServiceInput.user = user;
 
-    void await this.factory.entity.mes.Message().DeleteMessages(DeleteMessagesInput);
-    this.response.status = 200;
+    void await this.services.mes.DeleteUserMessagesService(deleteUserMessagesServiceInput);
+    this.response.status = 204;
   }
 
   /**

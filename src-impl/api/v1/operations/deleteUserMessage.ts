@@ -6,11 +6,11 @@ export default class extends operations.v1_deleteUserMessage {
     log.debug('v1_deleteUserMessage.execute()');
 
     const id = this.request.path.id;
-    const DeleteMessageInput = this.factory.entity.mes.DeleteMessage_Input();
-    DeleteMessageInput.id = id;
+    const deleteUserMessageServiceInput = this.factory.entity.mes.DeleteUserMessageService_Input();
+    deleteUserMessageServiceInput.id = id;
 
-    void await this.factory.entity.mes.Message().DeleteMessage(DeleteMessageInput);
-    this.response.status = 200;
+    void await this.services.mes.DeleteUserMessageService(deleteUserMessageServiceInput);
+    this.response.status = 204;
   }
 
   /**

@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import { commandRunners, TestEnvironment } from 'solution-framework';
 
-describe('mes:AddMessage', () => {
+describe('Test mes:AddMessageCommand', () => {
 
   const testEnvironment = new TestEnvironment();
 
@@ -9,10 +9,9 @@ describe('mes:AddMessage', () => {
     await testEnvironment.cleanup();
   });
 
-  it('works', async () => {
-    const runner = new commandRunners.mes_AddMessageRunner();
-
-    const addMessage = testEnvironment.factory.entity.mes.AddMessage_Input();
+  it('Add a message', async () => {
+    const runner = new commandRunners.mes_AddMessageCommandRunner();
+    const addMessage = testEnvironment.factory.entity.mes.AddMessageCommand_Input();
     addMessage.sender = 'Test Sender';
     addMessage.user = 'testUser';
     addMessage.text = 'Test Message';
@@ -23,6 +22,7 @@ describe('mes:AddMessage', () => {
     expect(newMessage.sender).to.equal('Test Sender');
     expect(newMessage.user).to.equal('testUser');
     expect(newMessage.text).to.equal('Test Message');
+    expect(newMessage.read).to.equal(false);
     expect(newMessage._id).to.not.equal('');
   });
 
