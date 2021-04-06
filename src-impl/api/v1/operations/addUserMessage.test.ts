@@ -7,6 +7,7 @@ describe('Test API addUserMessage', () => {
   after(async () => {
     await testEnvironment.cleanup();
   });
+
   it('Add a message for a user', async () => {
     const runner = new operationRunners.v1_addUserMessageRunner();
     runner.request.path.user = 'testUser';

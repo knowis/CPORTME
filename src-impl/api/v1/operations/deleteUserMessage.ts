@@ -1,4 +1,5 @@
 import { operations } from 'solution-framework';
+import { GeneralError } from 'solution-framework/dist/sdk/v1/error/GeneralError';
 export default class extends operations.v1_deleteUserMessage {
 
   public async execute(): Promise<void> {
@@ -20,7 +21,13 @@ export default class extends operations.v1_deleteUserMessage {
   public async handleError(error: Error): Promise<void> {
     const log = this.util.log;
     log.debug('v1_deleteUserMessage.handleError()');
-    // Add Error handling logic below and set this.response that will be returned as operation v1_deleteUserMessage response
+    if (error instanceof GeneralError) {
+      if (error.type === 'AggregateNotFoundError') {
+        this.response.status = 404;
+      } else if (error.type === 'InternalRequestError') {
+        this.response.status = 400;
+      }
+    }
   }
 
 }

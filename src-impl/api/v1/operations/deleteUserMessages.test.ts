@@ -1,26 +1,31 @@
 import { expect } from 'chai';
 import { operationRunners, TestEnvironment } from 'solution-framework';
+import { buildAndPersistTestMessage } from '../../../test/testUtil';
 
-describe('deleteUserMessages', () => {
+describe('Test API deleteUserMessages', () => {
   const testEnvironment = new TestEnvironment();
   before(async () => {
-    // This block will run automatically before all tests.
-    // Alternatively, use beforeEach() to define what should automatically happen before each test.
-    // This is an optional block.
+    await buildAndPersistTestMessage(testEnvironment, 'Test Sender', 'testUser', 'Test message 1');
+    await buildAndPersistTestMessage(testEnvironment, 'Test Sender', 'testUser', 'Test message 2');
+    await buildAndPersistTestMessage(testEnvironment, 'Test Sender', 'testUser2', 'Test message 3');
   });
   after(async () => {
-    // This block will run automatically after all tests.
-    // Alternatively, use afterEach() to define what should automatically happen after each test.
-    // This is an optional block.
-
-    // Recommended: remove all instances that were created
-    // await testEnvironment.cleanup();
+    await testEnvironment.cleanup();
   });
-  it('works', async () => {
-    // const runner = new operationRunners.v1_deleteUserMessagesRunner();
-    // await runner.run();
-    console.warn('No tests available');
-    expect(true).to.equal(true);
+  it('Deletes all messages from the user', async () => {
+    const runner = new operationRunners.v1_deleteUserMessagesRunner();
+    runner.request.path.user = 'testUser';
+
+    const apiResponse = await runner.run();
+    expect(apiResponse.status).to.equal(204);
+  });
+
+  it('Deletes all messages from a not existing user', async () => {
+    const runner = new operationRunners.v1_deleteUserMessagesRunner();
+    runner.request.path.user = 'notExisting';
+
+    const apiResponse = await runner.run();
+    expect(apiResponse.status).to.equal(204);
   });
 
 });

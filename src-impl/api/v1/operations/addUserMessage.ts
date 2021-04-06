@@ -23,8 +23,6 @@ export default class extends operations.v1_addUserMessage {
   public async handleError(error: Error): Promise<void> {
     const log = this.util.log;
     log.debug('v1_addUserMessage.handleError()');
-    // Add Error handling logic below and set this.response that will be returned as operation v1_addUserMessage response
-    console.log('call');
   }
 
 }

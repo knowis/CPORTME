@@ -12,7 +12,7 @@ export default class extends services.mes_MarkReadStatusService {
     markReadStatusCommandInput.read = read;
 
     const message = await this.repo.mes.Message.findById(id);
-    message.MarkReadStatusCommand(markReadStatusCommandInput);
+    void message.MarkReadStatusCommand(markReadStatusCommandInput);
   }
 
 }

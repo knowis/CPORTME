@@ -1,4 +1,5 @@
 import { operations } from 'solution-framework';
+import { GeneralError } from 'solution-framework/dist/sdk/v1/error/GeneralError';
 import { v1_Message } from 'solution-framework/dist/sdk/v1/namespace/schema/v1_Message';
 import { Mapper } from '../../../util/Mapper';
 
@@ -26,7 +27,13 @@ export default class extends operations.v1_getUserMessage {
   public async handleError(error: Error): Promise<void> {
     const log = this.util.log;
     log.debug('v1_getUserMessage.handleError()');
-    // Add Error handling logic below and set this.response that will be returned as operation v1_getUserMessage response
+    if (error instanceof GeneralError) {
+      if (error.type === 'AggregateNotFoundError') {
+        this.response.status = 404;
+      } else if (error.type === 'InternalRequestError') {
+        this.response.status = 400;
+      }
+    }
   }
 
 }

@@ -1,27 +1,29 @@
 import { expect } from 'chai';
 import { operationRunners, TestEnvironment } from 'solution-framework';
+import { buildAndPersistTestMessage } from '../../../test/testUtil';
 
+describe('Test API markReadStatus', () => {
 
-describe('markReadStatus', () => {
+  let aggregateId = '';
   const testEnvironment = new TestEnvironment();
   before(async () => {
-    // This block will run automatically before all tests.
-    // Alternatively, use beforeEach() to define what should automatically happen before each test.
-    // This is an optional block.
+    aggregateId = await buildAndPersistTestMessage(testEnvironment, 'Test Sender', 'testUser', 'Test message 1');
   });
   after(async () => {
-    // This block will run automatically after all tests.
-    // Alternatively, use afterEach() to define what should automatically happen after each test.
-    // This is an optional block.
-
-    // Recommended: remove all instances that were created
-    // await testEnvironment.cleanup();
+    await testEnvironment.cleanup();
   });
-  it('works', async () => {
-    // const runner = new operationRunners.v1_markReadStatusRunner();
-    // await runner.run();
-    console.warn('No tests available');
-    expect(true).to.equal(true);
+  it('Marks read status as read', async () => {
+    const runner = new operationRunners.v1_markReadStatusRunner();
+    runner.request.path.user = 'testUser';
+    runner.request.path.id = aggregateId;
+
+    const requestBody = testEnvironment.factory.schema.v1.ReadStatus();
+    requestBody.read = true;
+
+    runner.request.body = requestBody;
+
+    const messageResponse = await runner.run();
+    expect(messageResponse.status).to.equal(201);
   });
 
 });
