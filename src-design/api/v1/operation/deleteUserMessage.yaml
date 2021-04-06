@@ -20,6 +20,10 @@ responses:
     response:
       description: The message was deleted successfully
       content: []
+  - httpStatusCode: '400'
+    response:
+      description: Bad Request
+      content: []
 documentation:
   fileLink: /api/v1/operation/deleteUserMessage.md
   schemaVersion: /v1/documentation.schema.json
