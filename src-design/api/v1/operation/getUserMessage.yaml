@@ -18,6 +18,10 @@ responses:
     response:
       description: Message not found
       content: []
+  - httpStatusCode: '400'
+    response:
+      description: Bad Request
+      content: []
 documentation:
   fileLink: /api/v1/operation/getUserMessage.md
   schemaVersion: /v1/documentation.schema.json
