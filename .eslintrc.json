@@ -51,6 +51,9 @@
     "@typescript-eslint/camelcase": [
       "off"
     ],
+    "@typescript-eslint/class-name-casing": [
+      "error"
+    ],
     "@typescript-eslint/consistent-type-assertions": [
       "error"
     ],
