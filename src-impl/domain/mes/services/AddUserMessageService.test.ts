@@ -19,7 +19,7 @@ describe('Test mes:AddUserMessageService', () => {
     const output = await runner.run();
     expect(output.sender).to.equal('Test Sender');
     expect(output.user).to.equal('testUser');
-    expect(output.text).to.equal('Test Message');
+    expect(output.text).to.equal('Test message');
     expect(output._id).to.not.equal('');
   });
 
