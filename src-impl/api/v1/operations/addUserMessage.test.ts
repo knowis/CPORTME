@@ -18,8 +18,8 @@ describe('Test API addUserMessage', () => {
 
     runner.request.body = requestBody;
 
-    const messageResponse = await runner.run();
-    expect(messageResponse.status).to.equal(201);
+    const apiResponse = await runner.run();
+    expect(apiResponse.status).to.equal(201);
   });
 
 });

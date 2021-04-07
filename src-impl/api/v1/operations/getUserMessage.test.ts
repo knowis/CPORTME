@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import { operationRunners, TestEnvironment } from 'solution-framework';
 import { buildAndPersistTestMessage } from '../../../test/testUtil';
 
-describe('Test API deleteUserMessage', () => {
+describe('Test API getUserMessage', () => {
 
   let aggregateId = '';
   const testEnvironment = new TestEnvironment();
@@ -12,18 +12,20 @@ describe('Test API deleteUserMessage', () => {
   after(async () => {
     await testEnvironment.cleanup();
   });
-
-  it('Deletes a message by Id', async () => {
-    const runner = new operationRunners.v1_deleteUserMessageRunner();
+  it('Reads a message by Id', async () => {
+    const runner = new operationRunners.v1_getUserMessageRunner();
     runner.request.path.user = 'testUser';
     runner.request.path.id = aggregateId;
 
     const apiResponse = await runner.run();
-    expect(apiResponse.status).to.equal(204);
+    expect(apiResponse.status).to.equal(200);
+    const message = apiResponse.body;
+    expect(message.sender).to.equal('Test Sender');
+
   });
 
-  it('Deletes a message by a not existing Id', async () => {
-    const runner = new operationRunners.v1_deleteUserMessageRunner();
+  it('Reads a message by a not existing Id', async () => {
+    const runner = new operationRunners.v1_getUserMessageRunner();
     runner.request.path.user = 'testUser';
     runner.request.path.id = 'eaa57c4b-99a1-41fc-b66a-f98060002316';
 
@@ -31,17 +33,19 @@ describe('Test API deleteUserMessage', () => {
     expect(apiResponse.status).to.equal(404);
   });
 
-  it('Deletes a message by a not existing user', async () => {
-    const runner = new operationRunners.v1_deleteUserMessageRunner();
+  it('Reads a message by a not existing user', async () => {
+    const runner = new operationRunners.v1_getUserMessageRunner();
     runner.request.path.user = 'notExistingUser';
-    runner.request.path.id = 'eaa57c4b-99a1-41fc-b66a-f98060002316';
+    runner.request.path.id = aggregateId;
 
     const apiResponse = await runner.run();
-    expect(apiResponse.status).to.equal(404);
+    expect(apiResponse.status).to.equal(200);
+    const message = apiResponse.body;
+    expect(message.sender).to.equal('Test Sender');
   });
 
-  it('Deletes a message by an invalid Id', async () => {
-    const runner = new operationRunners.v1_deleteUserMessageRunner();
+  it('Reads a message by an invalid Id', async () => {
+    const runner = new operationRunners.v1_getUserMessageRunner();
     runner.request.path.user = 'testUser';
     runner.request.path.id = 'invalidId';
 
