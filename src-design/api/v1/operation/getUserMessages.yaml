@@ -1,5 +1,11 @@
 schemaVersion: /v3/apiOperation.schema.json
-comments: []
+comments:
+  - text: Test Comment
+    creationTs: '1620717551934'
+    creator: Ronny Krammer
+  - text: Next Comment
+    creationTs: '1620724609421'
+    creator: Ronny Krammer
 creationTs: '1617004182468'
 creator: Ronny Krammer
 creatorId: d36f56a3-2471-4d3e-9a7b-c6d13324c341
